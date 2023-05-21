@@ -6,6 +6,12 @@ load_dotenv()
 USER = os.getenv('USR')
 PASS = os.getenv('PASS')
 
+DB_USER = os.getenv('DB_USER')
+DB_PASS = os.getenv('DB_PASS')
+DB_BASE = os.getenv('DB_BASE')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = int(os.getenv('DB_PORT'))
+
 # print(USER, PASS)
 
 MAIN_URL = 'https://online.moysklad.ru/api/remap/1.2/'

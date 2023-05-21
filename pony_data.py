@@ -1,5 +1,6 @@
 from pony.orm import *
 from datetime import datetime
+from config import *
 
 db = Database()
 
@@ -21,6 +22,6 @@ class All_checks(db.Entity):
     discvalue = Optional(float)
 
 
-db.bind(provider='mysql', host='95.154.87.128', user='discount', passwd='Vl@zer52@7$', db='vlazer', port=33306)
+db.bind(provider='mysql', host=DB_HOST, user=DB_USER, passwd=DB_PASS, db=DB_BASE, port=DB_PORT)
 
 db.generate_mapping(create_tables=True)
